@@ -21,14 +21,14 @@ module cla_tb;
       $dumpfile("cla.vcd");
       $dumpvars;
       
-       a=  "0001";
-       b=  "0000";
+       a=  3;
+       b=  1;
        c_in = 0;
 
        #5
-       a= "0001";
-       b= "0000";
-       c_in = 1;
+       a= 15;
+       b= 1;
+       c_in = 0;
 
        #5
 
