@@ -15,7 +15,7 @@ module adder
    
    wire[N:0] result;
 
-   assign result = a +b;
+   assign result = a + b;
 
    assign res = result[N-1:0];
    assign carry = result[N];
