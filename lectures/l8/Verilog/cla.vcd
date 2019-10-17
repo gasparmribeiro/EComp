@@ -1,5 +1,5 @@
 $date
-	Tue Oct 15 16:24:27 2019
+	Tue Oct 15 16:32:31 2019
 $end
 $version
 	Icarus Verilog
@@ -8,8 +8,8 @@ $timescale
 	1s
 $end
 $scope module cla_tb $end
-$var wire 1 ! c_out $end
-$var wire 4 " s [3:0] $end
+$var wire 4 ! s [3:0] $end
+$var wire 1 " c_out $end
 $var reg 4 # a [3:0] $end
 $var reg 4 $ b [3:0] $end
 $var reg 1 % c_in $end
@@ -17,12 +17,12 @@ $scope module uut $end
 $var wire 4 & a [3:0] $end
 $var wire 4 ' b [3:0] $end
 $var wire 1 % c_in $end
-$var wire 1 ! c_out $end
 $var wire 4 ( s [3:0] $end
 $var wire 3 ) p_kl [2:0] $end
 $var wire 4 * p [3:0] $end
 $var wire 3 + g_kl [2:0] $end
 $var wire 4 , g [3:0] $end
+$var wire 1 " c_out $end
 $var wire 5 - c [4:0] $end
 $scope module a0 $end
 $var wire 1 . a $end
@@ -150,59 +150,67 @@ b11 &
 0%
 b1 $
 b11 #
-b100 "
-z!
+0"
+b100 !
 $end
 #5
-06
-09
-0I
-1G
-b1 +
-1L
-0M
-0H
-1E
-1Q
-b1101 "
-b1101 (
-13
-08
-17
-b10 ,
-01
-b1000 *
-1D
-1V
-1F
-10
-0/
-15
-0.
-1@
-b101 -
-1%
-b10 $
-b10 '
-b1010 #
-b1010 &
-#10
-b1001 "
-b1001 (
+1"
+b101 +
+1\
+1Y
+1B
+b10 )
+1R
 0?
+b11110 -
+1U
+1S
+b0 !
+b0 (
+0E
+1Q
+1>
+b1110 *
+1D
+1:
+1@
+b1111 #
+b1111 &
+#10
+0"
 0N
 0<
-b1 -
+0Y
+1E
+06
+0\
 0]
 0X
+b0 )
+0R
+0B
+0M
+0H
+09
 b0 +
 0L
-0G
+0I
+b1000 !
+b1000 (
+0?
+b0 -
+0U
+0S
 b0 ,
-07
-05
+01
+08
+b1000 *
+0>
+0/
 1A
+0.
 04
+0:
 0@
 b1000 $
 b1000 '

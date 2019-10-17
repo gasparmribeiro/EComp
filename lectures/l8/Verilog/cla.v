@@ -89,5 +89,8 @@ module cla
 	assign c[4] = g_kl[2] + (p_kl[2] & c[0]);
 
 
+	assign c_out = c[4];
+
+
 endmodule
 
