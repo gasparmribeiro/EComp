@@ -1,0 +1,37 @@
+1.
+a)
+
+Para um lost revenue de 3M (area do trapezio) => 3 = D  * (3+h)/2  <=>  h = (6-3D)/D 
+
+h = mD + b  -> m = -1*3/15 = -1/5  e b = 3  => h = -1/5*D +3
+
+Igualando as duas equações e resolvendo a equação de segundo grau: D ~ 1.036 ou D ~ 28.96
+
+28.96 meses é uma solução que nai faz sentido, assim, conclui-se que para um lost revenue maximo de 3M o delay maximo é de 1.046 meses.
+
+b)
+
+NRE = 2M   PM = 30% = profit / vendas
+
+vendas = 15*3/2 = 22.5 M
+
+profit = vendas - custos = Vendas - (NRE + UC * volume) = 22.5M - 2M - 10M*custo  <=>
+
+profit = 20.5M-10M*custo
+
+0.3 < 20.5M-10M*custo/22.5M <=> custo < 1.375$
+
+
+c) Dado o elevado volume, a compleixade do algoritomo e o baixo custo unitario, um processador dedicado, pelo seu custo mais baixo do que os processadores genericos, bem como menor consumo de potencia.  AO utilizar um CPU/GPU esta se a pagar por features que não são utilizadas. No entanto o NRE é mais elevado para desenhar o processador dediacdo.
+
+2.
+a)
+É um circuito multipicador matrix multiplier with carry save.
+O operando têm 3 bits e são signed
+
+b)
+A area é dada por: A = 3*2*AND + 3*NAND + 4*HA + 6*FA = 6 + 3 + 4*2 + 6*5 = 47 gates
+
+c)
+
+O delay e dado por : D = d_AND + d_HA(in_to_out) + 2*d_FA(in_to_cout) + d_FA(cin_to_cout) + d_FA(cin_out) = 1 + 1 + 2*3 + 2 + 1 = 11 gate delays

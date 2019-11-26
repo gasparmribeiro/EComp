@@ -1,0 +1,16 @@
+speed of light = 3*10⁸
+
+s = 0
+
+e = floot(log(3*10⁸)) + 127 = 28 + 127 = 155 = (em binario) = 10011011
+
+x <=> 3*10⁸ = x * 2²⁸ => x = 1.11758708954 ≃  (com 23 bits:) 1.117871
+
+	passando para binario: parte fracionaria = 0.117871 * 2 = 0.2351742   - 0
+						   0.2351742 * 2 = 0.4703     - 0 (...)
+
+
+planck constant = 6.62607004*10⁻³⁴
+s = 0
+
+e = floor(log(6.62607004*10⁻³⁴)) + 127 = 16

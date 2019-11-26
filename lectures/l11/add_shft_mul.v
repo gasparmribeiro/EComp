@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module add_shft_mul (
+module booth_mul (
                      input         clk,
                      input         rst,
                      
@@ -37,7 +37,7 @@ module add_shft_mul (
 endmodule
 
 
-module add_shft_mul_tb ();
+module booth_mul_tb ();
 
    reg clk, rst;
    reg [7:0] a, b;
@@ -45,7 +45,7 @@ module add_shft_mul_tb ();
    reg         start;
    wire        done;
    
-   add_shft_mul mult0 (
+   booth_mul mult0 (
                        .clk(clk),
                        .rst(rst),
                      
