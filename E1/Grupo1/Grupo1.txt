@@ -1,0 +1,19 @@
+					I
+
+1.a) no ficheiro rom.v
+
+1.b)
+nº addresses = 2^10 = 1024
+size of ROM module = 2^10*4 = 4KB.
+
+são necessários 32kB/4kB = 8 modules dos dados para construir o modulo pedido.
+Em que cada palavra do modulo dado (32 bits) contem 4 palavras do modulo pedido (8 bits)
+
+
+O número de bits de endereço do novo modulo é de log2(32kB/8) = 15. sendo que os 2 menos significativos são utilizados para escolher a palavra de 8 bits desejada dentro da palavra de 32 bits que sai de cada modulo.
+OS 3 bits mais significativos do endereço são utilizados para selecionar o modulo pretendido (de entre os 8), e os restantes 10 bits para endereçar cada um dos módulos utilizados.
+
+
+
+c) Uma Célula de uma memoria ROM é constituída por uma matriz de transístores, que por serem muito pequenos permitem uma elevada densidade, com a linha de dados ligas aos seus drenos e a linha de endereços as suas gates e a sua source ligada ao ground. Existe em cada linha de dados um transístor de pull up, os transístores ligados ao ground por serem maiores do que o do pull up forção o nível logico ‘0’ nessa célula, quando se quer guardar o nível logico 1, o transistor que esta ligado ao ground é queimado, assim, o transistor de pull up coloca o nível logico ‘1’.  
+
