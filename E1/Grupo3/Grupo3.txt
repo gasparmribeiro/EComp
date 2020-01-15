@@ -1,0 +1,34 @@
+III
+
+3.a)
+
+nº of address bits = log2(512MB/32) = 27
+
+Fully acossiative => Um linha por via => nº index bits = 0
+
+Cada Via contem apenas uma linha de 32bytes => nº vias = 8kB/32B = 256
+
+cada linha contem 32B/32bits = 8 palavras => nº offset bits = 3
+
+nº TAG bits = 27 - 0 - 3 = 24
+
+A cache tem:
+	2 vias
+	24 bits de TAG
+	0 bits de Index
+	3 bits de offset
+
+
+
+3.b)
+
+Os vetores X e Y são ambos transferidos na sua totalidade da memória para a cache. 
+Cada um contem 2048*4B = 8kB, logo são transferidos da memória para a chace 16kB
+
+Quando a cache fica cheia contem metade dos elementos do vetor X e metade dos elementos do vetor Y, 4kB de X e 4kB de Y.
+Para que os próximos valores de X e Y possam ser escritos na cache os valores anteriores têm de ser removidos. 
+No caso do vetor X, como existe dirty bit, os valores que estão na cache nao são enviados para a memoria, visto que nao foram alterados. No caso de Y, os valores que estão em cache têm de ser escritos em memória, por terem sido modificados, assim, 4kB são transferidos da cache para a memória, referentes à primeira metade de Y, sendo que a segunda metade fica na cache no fim do programa.
+
+Da memória para a cache = 16kB (todo o X e todo o Y)
+
+Da cache para a memória = 4kB (metade de Y)
