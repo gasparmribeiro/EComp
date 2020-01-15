@@ -1,0 +1,48 @@
+II
+
+
+2.a)
+
+o chip tem 8MB com palavras de 16bits endereços => 8MB/16bits = 2^22 endereços. 
+
+Assumindo que o chip é quadrado, dos 22 bits de endereçamento, utilizam-se 11 para a linha e 11 para a coluna. Resultando assim em 2^11 linhas e 2^11 colunas. 
+
+Existem neste chip 2^11 = 2048 arrays
+Como a palavra é de 16 bits, a dimensão de cada array é = 2^11 * 16 = 4kB
+
+
+
+2.b) destribuição de cargas. 
+
+Q = C*V
+
+C'd + Q'c = Qd + Qc
+
+Considerando que inicialmente Cd está precarregado a VDD/2 = 1.8/2 = 0.9V
+
+deltaV = V1(quando a celula guarda um 1) - V0(quando a celula guarda um 0)
+
+
+Quando a celcula guarda um 1: Vc = VDD, quando se estabiliza V'c = V'd = V1
+
+V1*(Cd + Cc)= 0.9*Cd + 1.8*Cc => V1 = (0.9*Cd + 1.8*Cc)/(Cd + Cc)
+
+
+Quando a celcula guarda um 0: Vc = 0, quando se estabiliza V'c = V'd = V0
+
+V1*(Cd + Cc)= 0.9*Cd + 0*Cc => V0 = (0.9*Cd)/(Cd + Cc)
+
+
+Sabendo que deltaV = 0.3V => 0.3 = (0.9*Cd + 1.8*Cc)/(Cd + Cc) - (0.9*Cd)/(Cd + Cc) <=> 0.3 = (1.8Cc)/((400*10^-15)+Cc) => Cc = 80fF
+
+
+2.c)
+Refresh interval(R.I) = 10ms    Refresh Overhed(R.O) = 3%
+
+R.O = (Time ro refresh all rows)/ R.I
+
+Time ro refresh all rows = nºRows * Time to refresh 1 row
+
+Time to refresh 1 row = time to read.
+
+=> R.O = (Tread*nºrows)/R.I <=> Tread = (R.O*R.I)/nºrows <=> (0.03*10*10^-3)/2048 <=> Tread ~ 146.48ns
